@@ -1,6 +1,6 @@
 <template>
+  <h1>App</h1>
   <button @click="count++">Count is: {{ count }}</button>
-
   <p>Using text interpolation: {{ rawHtml }}</p>
   <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 </template>

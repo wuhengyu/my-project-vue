@@ -26,6 +26,7 @@ export default {
 </script>
 
 <template>
+  <h1>App3</h1>
   <button @click="increment">OptionsAPI Count is: {{ count }}</button>
   <p>Using text interpolation: {{ rawHtml }}</p>
   <p>Using v-html directive: <span v-html="rawHtml"></span></p>

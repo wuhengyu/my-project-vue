@@ -31,6 +31,7 @@ export default {
 };
 </script> -->
 <template>
+  <h1>App2</h1>
   <button @click="count++">SingleFileComponents Count2 is: {{ count }}</button>
   <!-- 文本插值 -->
   <p>Using text interpolation: {{ rawHtml }}</p>
