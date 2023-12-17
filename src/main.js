@@ -10,6 +10,7 @@ import App7 from './conditionalRendering.vue'
 import App8 from './listRendering.vue'
 import App9 from './eventHandle.vue'
 import App10 from './formInputBinding.vue'
+import App11 from './lifeCycleHooks.vue'
 
 createApp(App).mount('#app')
 createApp(App2).mount('#app2')
@@ -21,5 +22,6 @@ createApp(App7).mount('#app7')
 createApp(App8).mount('#app8')
 createApp(App9).mount('#app9')
 createApp(App10).mount('#app10')
+createApp(App11).mount('#app11')
 
 
