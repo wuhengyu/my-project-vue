@@ -12,3 +12,7 @@ export default {
   },
 };
 </script>
+
+<!-- <script setup>
+import CounterComponent from "./CounterComponent.js";
+</script> -->

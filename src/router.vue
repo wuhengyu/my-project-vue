@@ -11,8 +11,10 @@ import namedSlot from "./Pages/diveComponents/namedSlot.vue";
 import componentEvents from "./Pages/diveComponents/componentEvents.vue";
 import eventParametersVue from "./Pages/diveComponents/eventParameters.vue";
 import componentVModel from "./Pages/diveComponents/component-v-model.vue";
-import componentBasics from "./Pages/diveComponents/componentBasics.vue";
-import noBuildSteps from "./Pages/diveComponents/noBuildSteps.vue";
+import componentBasics from "./Pages/diveComponents/basics/oneComponent.vue";
+import noBuildSteps from "./Pages/diveComponents/basics/noBuildSteps.vue";
+import UseComponents from "./Pages/diveComponents/basics/UseComponents.vue";
+import PassProps from "./Pages/diveComponents/basics/PassProps.vue";
 
 const routes = {
   "/Home": Home,
@@ -28,6 +30,8 @@ const routes = {
   "/component-v-model": componentVModel,
   "/componentBasics": componentBasics,
   "/noBuildSteps": noBuildSteps,
+  "/UseComponents": UseComponents,
+  "/PassProps": PassProps,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -46,6 +50,8 @@ const currentView = computed(() => {
   <a href="#/eventParameters">eventParameters</a> |
   <a href="#/component-v-model">component-v-model</a> |
   <a href="#/componentBasics">componentBasics</a> |
-  <a href="#/noBuildSteps">noBuildSteps</a>
+  <a href="#/noBuildSteps">noBuildSteps</a> |
+  <a href="#/UseComponents">UseComponents</a> |
+  <a href="#/PassProps">PassProps</a>
   <component :is="currentView" />
 </template>
