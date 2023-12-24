@@ -15,6 +15,7 @@ import MyComponent from "./MyComponent.vue";
 
 const callback = (payload) => {
   // 在这里处理事件回调
-  console.log("触发了 some-event 事件，携带的数据为:", payload);
+  // console.log("触发了 some-event 事件，携带的数据为:", payload);
+  alert("触发了 some-event 事件，携带的数据为:" + payload);
 };
 </script>

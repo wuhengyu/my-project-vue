@@ -1,5 +1,4 @@
 <!-- MyComponent.vue -->
-
 <template>
   <div>
     <button @click="handleClick" class="fancy-btn">点击我触发事件</button>
