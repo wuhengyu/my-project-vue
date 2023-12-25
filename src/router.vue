@@ -3,21 +3,23 @@ import { ref, computed } from "vue";
 import Home from "./Pages/Home.vue";
 import About from "./Pages/About.vue";
 import NotFound from "./Pages/NotFound.vue";
-import App from "./Pages/Foundation/App.vue";
-import calculate from "./Pages/Foundation/calculate.vue";
+import App from "./Pages/Basic/App.vue";
+import calculate from "./Pages/Basic/calculate.vue";
 import slot from "./Pages/diveComponents/slot.vue";
 import BaseLayout from "./Pages/diveComponents/BaseLayout.vue";
 import namedSlot from "./Pages/diveComponents/namedSlot.vue";
 import componentEvents from "./Pages/diveComponents/componentEvents.vue";
-import eventParametersVue from "./Pages/diveComponents/eventParameters.vue";
+import eventParameters from "./Pages/diveComponents/eventParameters.vue";
 import componentVModel from "./Pages/diveComponents/component-v-model.vue";
-import componentBasics from "./Pages/diveComponents/basics/oneComponent.vue";
-import noBuildSteps from "./Pages/diveComponents/basics/noBuildSteps.vue";
-import UseComponents from "./Pages/diveComponents/basics/UseComponents.vue";
-import PassProps from "./Pages/diveComponents/basics/PassProps.vue";
+import componentBasics from "./Pages/Basic/ComponentsBasic/oneComponent.vue";
+import noBuildSteps from "./Pages/Basic/ComponentsBasic/noBuildSteps.vue";
+import UseComponents from "./Pages/Basic/ComponentsBasic/UseComponents.vue";
+import PassProps from "./Pages/Basic/ComponentsBasic/PassProps.vue";
+import mulBlogPost from "./Pages/Basic/ComponentsBasic/mulBlogPost.vue";
+import AccessTemplateReference from "./Pages/Basic/TemplateTeference/AccessTemplateReference.vue";
 
 const routes = {
-  "/Home": Home,
+  "/": Home,
   "/about": About,
   "/App": App,
   "/calculate": calculate,
@@ -26,12 +28,14 @@ const routes = {
   "/namedSlot": namedSlot,
   "/BaseLayout": BaseLayout,
   "/componentEvents": componentEvents,
-  "/eventParameters": eventParametersVue,
+  "/eventParameters": eventParameters,
   "/component-v-model": componentVModel,
   "/componentBasics": componentBasics,
   "/noBuildSteps": noBuildSteps,
   "/UseComponents": UseComponents,
   "/PassProps": PassProps,
+  "/mulBlogPost": mulBlogPost,
+  "/AccessTemplateReference": AccessTemplateReference,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -52,6 +56,8 @@ const currentView = computed(() => {
   <a href="#/componentBasics">componentBasics</a> |
   <a href="#/noBuildSteps">noBuildSteps</a> |
   <a href="#/UseComponents">UseComponents</a> |
-  <a href="#/PassProps">PassProps</a>
+  <a href="#/PassProps">PassProps</a> |
+  <a href="#/mulBlogPost">mulBlogPost</a> |
+  <a href="#/AccessTemplateReference">AccessTemplateReference</a>
   <component :is="currentView" />
 </template>
