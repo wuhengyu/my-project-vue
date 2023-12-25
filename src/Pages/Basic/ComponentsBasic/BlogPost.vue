@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps, defineEmits } from "vue";
 // defineProps 是一个仅 <script setup> 中可用的编译宏命令
 // defineProps 会返回一个对象，其中包含了可以传递给组件的所有 props
 const props = defineProps(["title", "id"]);

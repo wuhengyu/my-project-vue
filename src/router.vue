@@ -17,6 +17,7 @@ import UseComponents from "./Pages/Basic/ComponentsBasic/UseComponents.vue";
 import PassProps from "./Pages/Basic/ComponentsBasic/PassProps.vue";
 import mulBlogPost from "./Pages/Basic/ComponentsBasic/mulBlogPost.vue";
 import AccessTemplateReference from "./Pages/Basic/TemplateTeference/AccessTemplateReference.vue";
+import BasicExample from "./Pages/Basic/Detectophone/BasicExample.vue";
 
 const routes = {
   "/": Home,
@@ -36,6 +37,7 @@ const routes = {
   "/PassProps": PassProps,
   "/mulBlogPost": mulBlogPost,
   "/AccessTemplateReference": AccessTemplateReference,
+  "/BasicExample": BasicExample,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -58,6 +60,7 @@ const currentView = computed(() => {
   <a href="#/UseComponents">UseComponents</a> |
   <a href="#/PassProps">PassProps</a> |
   <a href="#/mulBlogPost">mulBlogPost</a> |
-  <a href="#/AccessTemplateReference">AccessTemplateReference</a>
+  <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
+  <a href="#/BasicExample">BasicExample</a>
   <component :is="currentView" />
 </template>
