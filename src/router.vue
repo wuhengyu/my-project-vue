@@ -18,6 +18,10 @@ import PassProps from "./Pages/Basic/ComponentsBasic/PassProps.vue";
 import mulBlogPost from "./Pages/Basic/ComponentsBasic/mulBlogPost.vue";
 import AccessTemplateReference from "./Pages/Basic/TemplateTeference/AccessTemplateReference.vue";
 import BasicExample from "./Pages/Basic/Detectophone/BasicExample.vue";
+import BasicUsage from "./Pages/Basic/FormInputBinding/BasicUsage.vue";
+import InlineEvent from "./Pages/Basic/EventHandling/InlineEvent.vue";
+import MethodEvent from "./Pages/Basic/EventHandling/MethodEvent.vue";
+import VFor from "./Pages/Basic/ListRendering/VFor.vue";
 
 const routes = {
   "/": Home,
@@ -38,6 +42,10 @@ const routes = {
   "/mulBlogPost": mulBlogPost,
   "/AccessTemplateReference": AccessTemplateReference,
   "/BasicExample": BasicExample,
+  "/BasicUsage": BasicUsage,
+  "/InlineEvent": InlineEvent,
+  "/MethodEvent": MethodEvent,
+  "/VFor": VFor,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -61,6 +69,14 @@ const currentView = computed(() => {
   <a href="#/PassProps">PassProps</a> |
   <a href="#/mulBlogPost">mulBlogPost</a> |
   <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
-  <a href="#/BasicExample">BasicExample</a>
+  <a href="#/BasicExample">BasicExample</a> |
+  <a href="#/BasicUsage">BasicUsage</a>
+
+  <h1>事件处理</h1>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a>
+
+  <h1>列表渲染</h1>
+  <a href="#/VFor">VFor</a> |
   <component :is="currentView" />
 </template>
