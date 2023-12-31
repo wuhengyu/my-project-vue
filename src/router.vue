@@ -22,6 +22,13 @@ import BasicUsage from "./Pages/Basic/FormInputBinding/BasicUsage.vue";
 import InlineEvent from "./Pages/Basic/EventHandling/InlineEvent.vue";
 import MethodEvent from "./Pages/Basic/EventHandling/MethodEvent.vue";
 import VFor from "./Pages/Basic/ListRendering/VFor.vue";
+import VForJs from "./Pages/Basic/ListRendering/VForJs.vue";
+import VForKey from "./Pages/Basic/ListRendering/VForKey.vue";
+import VForIndex from "./Pages/Basic/ListRendering/VForIndex.vue";
+import VForObject from "./Pages/Basic/ListRendering/VForObject.vue";
+import ConditionalRender from "./Pages/Basic/ConditionalRender/ConditionalRender.vue";
+import TemplateIf from "./Pages/Basic/ConditionalRender/TemplateIf.vue";
+import TemplateIfShow from "./Pages/Basic/ConditionalRender/TemplateIfShow.vue";
 
 const routes = {
   "/": Home,
@@ -46,6 +53,13 @@ const routes = {
   "/InlineEvent": InlineEvent,
   "/MethodEvent": MethodEvent,
   "/VFor": VFor,
+  "/VForJs": VForJs,
+  "/VForKey": VForKey,
+  "/VForIndex": VForIndex,
+  "/VForObject": VForObject,
+  "/ConditionalRender": ConditionalRender,
+  "/TemplateIf": TemplateIf,
+  "/TemplateIfShow": TemplateIfShow,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -77,6 +91,38 @@ const currentView = computed(() => {
   <a href="#/MethodEvent">MethodEvent</a>
 
   <h1>列表渲染</h1>
-  <a href="#/VFor">VFor</a> |
+  <a href="#/VFor">VFor</a> | <a href="#/VForJs">VForJs</a> |
+  <a href="#/VForKey">VForKey</a> | <a href="#/VForIndex">VForIndex</a> |
+  <a href="#/VForObject">VForObject</a>
+
+  <h1>条件渲染</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h1>Class 与 Style 绑定</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h1>计算属性</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h1>响应式基础</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h1>模板语法</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h1>创建一个 Vue 应用</h1>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
   <component :is="currentView" />
 </template>
