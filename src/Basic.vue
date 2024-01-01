@@ -29,6 +29,13 @@ import VForObject from "./Pages/Basic/ListRendering/VForObject.vue";
 import ConditionalRender from "./Pages/Basic/ConditionalRender/ConditionalRender.vue";
 import TemplateIf from "./Pages/Basic/ConditionalRender/TemplateIf.vue";
 import TemplateIfShow from "./Pages/Basic/ConditionalRender/TemplateIfShow.vue";
+import Transition from "./Pages/BuiltInComponents/Transition/Transition.vue";
+import TransitionCSS from "./Pages/BuiltInComponents/Transition/TransitionCSS.vue";
+import TransitionCSSAnimation from "./Pages/BuiltInComponents/Transition/TransitionCSSAnimation.vue";
+import TransitionCSSCustom from "./Pages/BuiltInComponents/Transition/TransitionCSSCustom.vue";
+import TransitionDuration from "./Pages/BuiltInComponents/Transition/TransitionDuration.vue";
+import TransitionJavaScriptHook from "./Pages/BuiltInComponents/Transition/TransitionJavaScriptHook.vue";
+import TransitionReuse from "./Pages/BuiltInComponents/Transition/TransitionReuse.vue";
 
 const routes = {
   "/": Home,
@@ -60,6 +67,13 @@ const routes = {
   "/ConditionalRender": ConditionalRender,
   "/TemplateIf": TemplateIf,
   "/TemplateIfShow": TemplateIfShow,
+  "/Transition": Transition,
+  "/TransitionCSS": TransitionCSS,
+  "/TransitionCSSAnimation": TransitionCSSAnimation,
+  "/TransitionCSSCustom": TransitionCSSCustom,
+  "/TransitionDuration": TransitionDuration,
+  "/TransitionJavaScriptHook": TransitionJavaScriptHook,
+  "/TransitionReuse": TransitionReuse,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -121,8 +135,15 @@ const currentView = computed(() => {
   <a href="#/TemplateIfShow">TemplateIfShow</a> |
 
   <h1>创建一个 Vue 应用</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+  <a href="#/Applications">Applications</a> |
+
+  <h1>内置组件</h1>
+  <a href="#/Transition">Transition</a> |
+  <a href="#/TransitionCSS">TransitionCSS</a> |
+  <a href="#/TransitionCSSAnimation">TransitionCSSAnimation</a> |
+  <a href="#/TransitionCSSCustom">TransitionCSSCustom</a> |
+  <a href="#/TransitionDuration">TransitionDuration</a> |
+  <a href="#/TransitionJavaScriptHook">TransitionJavaScriptHook</a> |
+  <a href="#/TransitionReuse">TransitionReuse</a>
   <component :is="currentView" />
 </template>

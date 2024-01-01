@@ -26,7 +26,7 @@ import './style.css'
 // createApp(App11).mount('#app11')
 
 
-import App from './router.vue'
+import App from './Basic.vue'
 createApp(App).mount('#app')
 
 
