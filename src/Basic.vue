@@ -36,6 +36,8 @@ import TransitionJavaScriptHook from "./Pages/BuiltInComponents/Transition/Trans
 import TransitionReuse from "./Pages/BuiltInComponents/Transition/TransitionReuse.vue";
 import EnterLeaveAnimation from "./Pages/BuiltInComponents/TransitionGroup/EnterLeaveAnimation.vue";
 import ProgressiveDelayAnimation from "./Pages/BuiltInComponents/TransitionGroup/ProgressiveDelayAnimation.vue";
+import KeepAliveBasicUsage from "./Pages/BuiltInComponents/KeepAlive/KeepAliveBasicUsage.vue";
+import TeleportTransition from "./Pages/BuiltInComponents/KeepAlive/TeleportTransition.vue";
 
 const routes = {
   "/": App,
@@ -74,6 +76,8 @@ const routes = {
   "/TransitionReuse": TransitionReuse,
   "/EnterLeaveAnimation": EnterLeaveAnimation,
   "/ProgressiveDelayAnimation": ProgressiveDelayAnimation,
+  "/KeepAliveBasicUsage": KeepAliveBasicUsage,
+  "/TeleportTransition": TeleportTransition,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -150,5 +154,10 @@ const currentView = computed(() => {
   <h3>TransitionGroup</h3>
   <a href="#/EnterLeaveAnimation">EnterLeaveAnimation</a> |
   <a href="#/ProgressiveDelayAnimation">ProgressiveDelayAnimation</a> |
+
+  <h3>KeepAlive</h3>
+  <a href="#/KeepAliveBasicUsage">KeepAliveBasicUsage</a> |
+  <a href="#/ProgressiveDelayAnimation">ProgressiveDelayAnimation</a> |
+  <a href="#/TeleportTransition">TeleportTransition</a> |
   <component :is="currentView" />
 </template>
