@@ -1,7 +1,6 @@
 <template>
   <h3>基于 CSS 的过渡效果</h3>
   <button @click="show = !show">Toggle Slide + Fade</button>
-  <br /><br /><br />
   <Transition name="slide-fade">
     <p v-if="show">hello</p>
   </Transition>

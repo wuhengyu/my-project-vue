@@ -1,13 +1,9 @@
 <template>
   <h3>进入/离开动画</h3>
   <button @click="insert">插入</button>
-  <br /><br /><br />
   <button @click="shuffle">洗牌</button>
-  <br /><br /><br />
   <button @click="reset">重置</button>
-  <br /><br /><br />
   <button @click="randomRemove">删除</button>
-  <br /><br /><br />
   <TransitionGroup tag="ul" name="fade" class="container">
     <div v-for="item in items" class="item" :key="item">
       {{ item }}

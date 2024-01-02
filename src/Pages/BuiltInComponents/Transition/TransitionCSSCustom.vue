@@ -7,7 +7,6 @@ const show = ref(true);
 <template>
   <h3>自定义过渡 class</h3>
   <button @click="show = !show">Toggle</button>
-  <br /><br /><br />
   <Transition
     name="custom-classes"
     enter-active-class="animate__animated animate__tada"

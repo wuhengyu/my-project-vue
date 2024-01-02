@@ -17,9 +17,9 @@ export default {
 };
 </script>
 
-<style>
+<!-- <style>
 button {
   padding: 10px 20px;
   font-size: 20px;
 }
-</style>
+</style> -->

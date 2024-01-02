@@ -66,8 +66,8 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 button {
   font-weight: bold;
 }
-</style>
+</style> -->

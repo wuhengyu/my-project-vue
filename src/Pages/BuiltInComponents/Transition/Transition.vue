@@ -1,7 +1,6 @@
 <template>
   <h3>Transition 组件</h3>
   <button @click="show = !show">Toggle</button>
-  <br /><br /><br />
   <Transition>
     <p v-if="show">hello</p>
   </Transition>

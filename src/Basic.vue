@@ -1,7 +1,5 @@
 <script setup>
 import { ref, computed } from "vue";
-import Home from "./Pages/Home.vue";
-import About from "./Pages/About.vue";
 import NotFound from "./Pages/NotFound.vue";
 import App from "./Pages/Basic/App.vue";
 import calculate from "./Pages/Basic/calculate.vue";
@@ -37,11 +35,10 @@ import TransitionDuration from "./Pages/BuiltInComponents/Transition/TransitionD
 import TransitionJavaScriptHook from "./Pages/BuiltInComponents/Transition/TransitionJavaScriptHook.vue";
 import TransitionReuse from "./Pages/BuiltInComponents/Transition/TransitionReuse.vue";
 import EnterLeaveAnimation from "./Pages/BuiltInComponents/TransitionGroup/EnterLeaveAnimation.vue";
+import ProgressiveDelayAnimation from "./Pages/BuiltInComponents/TransitionGroup/ProgressiveDelayAnimation.vue";
 
 const routes = {
-  "/": Home,
-  "/about": About,
-  "/App": App,
+  "/": App,
   "/calculate": calculate,
   "/non-existent-path": NotFound,
   "/slot": slot,
@@ -76,6 +73,7 @@ const routes = {
   "/TransitionJavaScriptHook": TransitionJavaScriptHook,
   "/TransitionReuse": TransitionReuse,
   "/EnterLeaveAnimation": EnterLeaveAnimation,
+  "/ProgressiveDelayAnimation": ProgressiveDelayAnimation,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -86,7 +84,44 @@ const currentView = computed(() => {
 });
 </script>
 <template>
-  <a href="#/">Home</a> | <a href="#/about">About</a> |
+  <h1>基础</h1>
+  <h3>创建一个 Vue 应用</h3>
+  <a href="#/Applications">Applications</a> |
+
+  <h3>模板语法</h3>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h3>响应式基础</h3>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h3>计算属性</h3>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h3>Class 与 Style 绑定</h3>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h3>条件渲染</h3>
+  <a href="#/ConditionalRender">ConditionalRender</a> |
+  <a href="#/TemplateIf">TemplateIf</a> |
+  <a href="#/TemplateIfShow">TemplateIfShow</a> |
+
+  <h3>列表渲染</h3>
+  <a href="#/VFor">VFor</a> | <a href="#/VForJs">VForJs</a> |
+  <a href="#/VForKey">VForKey</a> | <a href="#/VForIndex">VForIndex</a> |
+  <a href="#/VForObject">VForObject</a> |
+
+  <h3>事件处理</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
   <a href="#/App">App</a> | <a href="#/calculate">calculate</a> |
   <a href="#/non-existent-path">NotFound</a> | <a href="#/slot">slot</a> |
   <a href="#/BaseLayout">BaseLayout</a> | <a href="#/namedSlot">namedSlot</a> |
@@ -102,43 +137,6 @@ const currentView = computed(() => {
   <a href="#/BasicExample">BasicExample</a> |
   <a href="#/BasicUsage">BasicUsage</a>
 
-  <h1>事件处理</h1>
-  <a href="#/InlineEvent">InlineEvent</a> |
-  <a href="#/MethodEvent">MethodEvent</a>
-
-  <h1>列表渲染</h1>
-  <a href="#/VFor">VFor</a> | <a href="#/VForJs">VForJs</a> |
-  <a href="#/VForKey">VForKey</a> | <a href="#/VForIndex">VForIndex</a> |
-  <a href="#/VForObject">VForObject</a>
-
-  <h1>条件渲染</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
-
-  <h1>Class 与 Style 绑定</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
-
-  <h1>计算属性</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
-
-  <h1>响应式基础</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
-
-  <h1>模板语法</h1>
-  <a href="#/ConditionalRender">ConditionalRender</a> |
-  <a href="#/TemplateIf">TemplateIf</a> |
-  <a href="#/TemplateIfShow">TemplateIfShow</a> |
-
-  <h1>创建一个 Vue 应用</h1>
-  <a href="#/Applications">Applications</a> |
-
   <h1>内置组件</h1>
   <h3>Transition</h3>
   <a href="#/Transition">Transition</a> |
@@ -151,7 +149,6 @@ const currentView = computed(() => {
 
   <h3>TransitionGroup</h3>
   <a href="#/EnterLeaveAnimation">EnterLeaveAnimation</a> |
+  <a href="#/ProgressiveDelayAnimation">ProgressiveDelayAnimation</a> |
   <component :is="currentView" />
 </template>
-
-EnterLeaveAnimation
