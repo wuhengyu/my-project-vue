@@ -43,6 +43,7 @@ function onLeave(el, done) {
 <template>
   <h3>JavaScript 钩子</h3>
   <button @click="show = !show">Toggle</button>
+  <br /><br /><br />
 
   <Transition
     @before-enter="onBeforeEnter"

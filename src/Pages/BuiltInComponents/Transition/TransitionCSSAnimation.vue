@@ -1,6 +1,7 @@
 <template>
   <h3>CSS 的 animation</h3>
   <button @click="show = !show">Toggle</button>
+  <br /><br /><br />
   <Transition name="bounce">
     <p v-if="show" style="text-align: center">
       Hello here is some bouncy text!

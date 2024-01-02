@@ -7,6 +7,7 @@ const show = ref(true);
 <template>
   <h3>深层级过渡与显式过渡时长</h3>
   <button @click="show = !show">Toggle</button>
+  <br /><br /><br />
   <Transition :duration="550" name="nested">
     <div v-if="show" class="outer">
       <div class="inner">Hello</div>

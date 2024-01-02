@@ -7,6 +7,7 @@ const docState = ref("saved");
 <template>
   <h3>可复用过渡效果</h3>
   <span style="margin-right: 20px">Click to cycle through states:</span>
+  <br /><br /><br />
   <div class="btn-container">
     <Transition name="slide-up">
       <button v-if="docState === 'saved'" @click="docState = 'edited'">

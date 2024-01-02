@@ -36,6 +36,7 @@ import TransitionCSSCustom from "./Pages/BuiltInComponents/Transition/Transition
 import TransitionDuration from "./Pages/BuiltInComponents/Transition/TransitionDuration.vue";
 import TransitionJavaScriptHook from "./Pages/BuiltInComponents/Transition/TransitionJavaScriptHook.vue";
 import TransitionReuse from "./Pages/BuiltInComponents/Transition/TransitionReuse.vue";
+import EnterLeaveAnimation from "./Pages/BuiltInComponents/TransitionGroup/EnterLeaveAnimation.vue";
 
 const routes = {
   "/": Home,
@@ -74,6 +75,7 @@ const routes = {
   "/TransitionDuration": TransitionDuration,
   "/TransitionJavaScriptHook": TransitionJavaScriptHook,
   "/TransitionReuse": TransitionReuse,
+  "/EnterLeaveAnimation": EnterLeaveAnimation,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -138,6 +140,7 @@ const currentView = computed(() => {
   <a href="#/Applications">Applications</a> |
 
   <h1>内置组件</h1>
+  <h3>Transition</h3>
   <a href="#/Transition">Transition</a> |
   <a href="#/TransitionCSS">TransitionCSS</a> |
   <a href="#/TransitionCSSAnimation">TransitionCSSAnimation</a> |
@@ -145,5 +148,10 @@ const currentView = computed(() => {
   <a href="#/TransitionDuration">TransitionDuration</a> |
   <a href="#/TransitionJavaScriptHook">TransitionJavaScriptHook</a> |
   <a href="#/TransitionReuse">TransitionReuse</a>
+
+  <h3>TransitionGroup</h3>
+  <a href="#/EnterLeaveAnimation">EnterLeaveAnimation</a> |
   <component :is="currentView" />
 </template>
+
+EnterLeaveAnimation
