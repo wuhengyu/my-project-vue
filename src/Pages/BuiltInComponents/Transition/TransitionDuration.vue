@@ -17,13 +17,13 @@ const show = ref(true);
 <style>
 .outer,
 .inner {
-  background: #eee;
+  background: #e7abab;
   padding: 30px;
   min-height: 100px;
 }
 
 .inner {
-  background: #ccc;
+  background: #dbeead;
 }
 
 .nested-enter-active,

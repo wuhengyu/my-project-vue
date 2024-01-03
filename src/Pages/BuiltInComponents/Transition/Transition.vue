@@ -12,10 +12,26 @@ const show = ref(true);
 </script>
 
 <style>
-/* 下面我们会解释这些 class 是做什么的 */
+/**
+ * .v-enter-active 和 .v-leave-active 选择器
+ * 这两个选择器定义了过渡效果应用于哪个元素
+ * { transition: opacity 0.5s ease; }
+ * 这个属性定义了过渡效果的类型、持续时间和缓动函数
+ * 过渡效果是 opacity 的变化
+ * 0.5s 表示过渡效果的持续时间是0.5秒
+ * ease 表示缓动函数是缓入缓出的
+
+/**
+ * .v-enter-from 和 .v-leave-to 选择器
+ * 这两个选择器定义了过渡效果的起始状态和结束状态
+ * { opacity: 0; }
+ * 这个属性定义了元素的透明度的起始值和结束值
+ * 在过渡效果开始和结束时，元素的透明度将从 0 变化到 0
+ * 即元素在开始动画和结束动画时将完全透明
+ */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 1.5s ease;
 }
 
 .v-enter-from,
@@ -23,3 +39,6 @@ const show = ref(true);
   opacity: 0;
 }
 </style>
+
+
+
