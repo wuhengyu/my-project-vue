@@ -37,7 +37,7 @@ import TransitionReuse from "./Pages/BuiltInComponents/Transition/TransitionReus
 import EnterLeaveAnimation from "./Pages/BuiltInComponents/TransitionGroup/EnterLeaveAnimation.vue";
 import ProgressiveDelayAnimation from "./Pages/BuiltInComponents/TransitionGroup/ProgressiveDelayAnimation.vue";
 import KeepAliveBasicUsage from "./Pages/BuiltInComponents/KeepAlive/KeepAliveBasicUsage.vue";
-import TeleportTransition from "./Pages/BuiltInComponents/KeepAlive/TeleportTransition.vue";
+import TeleportTransition from "./Pages/BuiltInComponents/Teleport/TeleportTransition.vue";
 
 const routes = {
   "/": App,
@@ -157,7 +157,8 @@ const currentView = computed(() => {
 
   <h3>KeepAlive</h3>
   <a href="#/KeepAliveBasicUsage">KeepAliveBasicUsage</a> |
-  <a href="#/ProgressiveDelayAnimation">ProgressiveDelayAnimation</a> |
+
+  <h3>Teleport</h3>
   <a href="#/TeleportTransition">TeleportTransition</a> |
   <component :is="currentView" />
 </template>
