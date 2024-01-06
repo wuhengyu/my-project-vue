@@ -6,8 +6,6 @@ import calculate from "./Pages/Basic/calculate.vue";
 import slot from "./Pages/diveComponents/slot.vue";
 import BaseLayout from "./Pages/diveComponents/BaseLayout.vue";
 import namedSlot from "./Pages/diveComponents/namedSlot.vue";
-import componentEvents from "./Pages/diveComponents/componentEvents.vue";
-import eventParameters from "./Pages/diveComponents/eventParameters.vue";
 import componentVModel from "./Pages/diveComponents/component-v-model.vue";
 import componentBasics from "./Pages/Basic/ComponentsBasic/oneComponent.vue";
 import noBuildSteps from "./Pages/Basic/ComponentsBasic/noBuildSteps.vue";
@@ -38,6 +36,12 @@ import EnterLeaveAnimation from "./Pages/BuiltInComponents/TransitionGroup/Enter
 import ProgressiveDelayAnimation from "./Pages/BuiltInComponents/TransitionGroup/ProgressiveDelayAnimation.vue";
 import KeepAliveBasicUsage from "./Pages/BuiltInComponents/KeepAlive/KeepAliveBasicUsage.vue";
 import TeleportTransition from "./Pages/BuiltInComponents/Teleport/TeleportTransition.vue";
+import AsyncSetup from "./Pages/BuiltInComponents/Suspense/AsyncSetup.vue";
+import ParentMessage from "./Pages/DepthComponent/Props/ParentMessage.vue";
+import InhertAttributesApplication from "./Pages/DepthComponent/InheritAttributes/InhertAttributesApplication.vue";
+import ParentComponentInheritAttributes from "./Pages/DepthComponent/InheritAttributes/ParentComponentInheritAttributes.vue";
+import TriggeringMonitorEvents from "./Pages/DepthComponent/ComponentEvent/TriggeringMonitorEvents.vue";
+import EventParameters from "./Pages/DepthComponent/ComponentEvent/EventParameters.vue";
 
 const routes = {
   "/": App,
@@ -46,8 +50,6 @@ const routes = {
   "/slot": slot,
   "/namedSlot": namedSlot,
   "/BaseLayout": BaseLayout,
-  "/componentEvents": componentEvents,
-  "/eventParameters": eventParameters,
   "/component-v-model": componentVModel,
   "/componentBasics": componentBasics,
   "/noBuildSteps": noBuildSteps,
@@ -78,6 +80,12 @@ const routes = {
   "/ProgressiveDelayAnimation": ProgressiveDelayAnimation,
   "/KeepAliveBasicUsage": KeepAliveBasicUsage,
   "/TeleportTransition": TeleportTransition,
+  "/AsyncSetup": AsyncSetup,
+  "/ParentMessage": ParentMessage,
+  "/InhertAttributesApplication": InhertAttributesApplication,
+  "/ParentComponentInheritAttributes": ParentComponentInheritAttributes,
+  "/TriggeringMonitorEvents": TriggeringMonitorEvents,
+  "/EventParameters": EventParameters,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -129,8 +137,6 @@ const currentView = computed(() => {
   <a href="#/App">App</a> | <a href="#/calculate">calculate</a> |
   <a href="#/non-existent-path">NotFound</a> | <a href="#/slot">slot</a> |
   <a href="#/BaseLayout">BaseLayout</a> | <a href="#/namedSlot">namedSlot</a> |
-  <a href="#/componentEvents">componentEvents</a> |
-  <a href="#/eventParameters">eventParameters</a> |
   <a href="#/component-v-model">component-v-model</a> |
   <a href="#/componentBasics">componentBasics</a> |
   <a href="#/noBuildSteps">noBuildSteps</a> |
@@ -140,6 +146,21 @@ const currentView = computed(() => {
   <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
   <a href="#/BasicExample">BasicExample</a> |
   <a href="#/BasicUsage">BasicUsage</a>
+
+  <h1>深入组件</h1>
+  <h3>Props</h3>
+  <a href="#/ParentMessage">ParentMessage</a> |
+
+  <h3>组件事件</h3>
+  <a href="#/TriggeringMonitorEvents">TriggeringMonitorEvents</a> |
+  <a href="#/EventParameters">EventParameters</a> |
+
+  <h3>透传 Attributes</h3>
+  <a href="#/InhertAttributesApplication">InhertAttributesApplication</a> |
+  <a href="#/ParentComponentInheritAttributes"
+    >ParentComponentInheritAttributes</a
+  >
+  |
 
   <h1>内置组件</h1>
   <h3>Transition</h3>
@@ -160,5 +181,8 @@ const currentView = computed(() => {
 
   <h3>Teleport</h3>
   <a href="#/TeleportTransition">TeleportTransition</a> |
+
+  <h3>Suspense</h3>
+  <a href="#/AsyncSetup">AsyncSetup</a> |
   <component :is="currentView" />
 </template>
