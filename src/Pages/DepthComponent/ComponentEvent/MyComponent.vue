@@ -8,6 +8,7 @@
       并传递一个字符串 'to make each day count!' 作为事件的 payload（数据） -->
     <!-- 子组件内部直接触发事件，将事件传递给父组件或其他监听了该事件的组件。
     父组件可以通过 @someEvent 来监听该事件，并在触发时执行相应的回调函数。 -->
+    <!-- 在这里触发事件并传递数据 -->
     <button @click="$emit('someEvent', 'to make each day count!')">
       click me
     </button>

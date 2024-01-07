@@ -6,7 +6,7 @@ import calculate from "./Pages/Basic/calculate.vue";
 import slot from "./Pages/diveComponents/slot.vue";
 import BaseLayout from "./Pages/diveComponents/BaseLayout.vue";
 import namedSlot from "./Pages/diveComponents/namedSlot.vue";
-import componentVModel from "./Pages/diveComponents/component-v-model.vue";
+import ComponentModel from "./Pages/DepthComponent/ComponentModel/ComponentModel.vue";
 import componentBasics from "./Pages/Basic/ComponentsBasic/oneComponent.vue";
 import noBuildSteps from "./Pages/Basic/ComponentsBasic/noBuildSteps.vue";
 import UseComponents from "./Pages/Basic/ComponentsBasic/UseComponents.vue";
@@ -42,6 +42,7 @@ import InhertAttributesApplication from "./Pages/DepthComponent/InheritAttribute
 import ParentComponentInheritAttributes from "./Pages/DepthComponent/InheritAttributes/ParentComponentInheritAttributes.vue";
 import TriggeringMonitorEvents from "./Pages/DepthComponent/ComponentEvent/TriggeringMonitorEvents.vue";
 import EventParameters from "./Pages/DepthComponent/ComponentEvent/EventParameters.vue";
+import ParentButtonClick from "./Pages/DepthComponent/ComponentEvent/ParentButtonClick.vue";
 
 const routes = {
   "/": App,
@@ -50,7 +51,7 @@ const routes = {
   "/slot": slot,
   "/namedSlot": namedSlot,
   "/BaseLayout": BaseLayout,
-  "/component-v-model": componentVModel,
+  "/ComponentModel": ComponentModel,
   "/componentBasics": componentBasics,
   "/noBuildSteps": noBuildSteps,
   "/UseComponents": UseComponents,
@@ -86,6 +87,7 @@ const routes = {
   "/ParentComponentInheritAttributes": ParentComponentInheritAttributes,
   "/TriggeringMonitorEvents": TriggeringMonitorEvents,
   "/EventParameters": EventParameters,
+  "/ParentButtonClick": ParentButtonClick,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -115,7 +117,7 @@ const currentView = computed(() => {
   <a href="#/TemplateIf">TemplateIf</a> |
   <a href="#/TemplateIfShow">TemplateIfShow</a> |
 
-  <h3>Class 与 Style 绑定</h3>
+  <h3>类与样式绑定</h3>
   <a href="#/ConditionalRender">ConditionalRender</a> |
   <a href="#/TemplateIf">TemplateIf</a> |
   <a href="#/TemplateIfShow">TemplateIfShow</a> |
@@ -134,26 +136,45 @@ const currentView = computed(() => {
   <a href="#/InlineEvent">InlineEvent</a> |
   <a href="#/MethodEvent">MethodEvent</a> |
 
-  <a href="#/App">App</a> | <a href="#/calculate">calculate</a> |
-  <a href="#/non-existent-path">NotFound</a> | <a href="#/slot">slot</a> |
-  <a href="#/BaseLayout">BaseLayout</a> | <a href="#/namedSlot">namedSlot</a> |
-  <a href="#/component-v-model">component-v-model</a> |
-  <a href="#/componentBasics">componentBasics</a> |
-  <a href="#/noBuildSteps">noBuildSteps</a> |
-  <a href="#/UseComponents">UseComponents</a> |
-  <a href="#/PassProps">PassProps</a> |
-  <a href="#/mulBlogPost">mulBlogPost</a> |
-  <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
-  <a href="#/BasicExample">BasicExample</a> |
-  <a href="#/BasicUsage">BasicUsage</a>
+  <h3>表单输入绑定</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
+  <h3>生命周期</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
+  <h3>侦听器</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
+  <h3>模板引用</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
+  <h3>组件基础</h3>
+  <a href="#/InlineEvent">InlineEvent</a> |
+  <a href="#/MethodEvent">MethodEvent</a> |
+
+  <h1>逻辑复用</h1>
+  <h3>组合式函数</h3>
+  <h3>自定义指令</h3>
+  <h3>插件</h3>
 
   <h1>深入组件</h1>
+  <h3>注册</h3>
+  <a href="#/ParentMessage">ParentMessage</a> |
+
   <h3>Props</h3>
   <a href="#/ParentMessage">ParentMessage</a> |
 
-  <h3>组件事件</h3>
+  <h3>事件</h3>
   <a href="#/TriggeringMonitorEvents">TriggeringMonitorEvents</a> |
   <a href="#/EventParameters">EventParameters</a> |
+  <a href="#/ParentButtonClick">ParentButtonClick</a> |
+
+  <h3>组件 v-model</h3>
+  <a href="#/ComponentModel">ComponentModel</a> |
 
   <h3>透传 Attributes</h3>
   <a href="#/InhertAttributesApplication">InhertAttributesApplication</a> |
@@ -161,6 +182,12 @@ const currentView = computed(() => {
     >ParentComponentInheritAttributes</a
   >
   |
+
+  <h3>插槽</h3>
+
+  <h3>依赖注入</h3>
+
+  <h3>异步组件</h3>
 
   <h1>内置组件</h1>
   <h3>Transition</h3>
@@ -184,5 +211,17 @@ const currentView = computed(() => {
 
   <h3>Suspense</h3>
   <a href="#/AsyncSetup">AsyncSetup</a> |
+
+  <a href="#/App">App</a> | <a href="#/calculate">calculate</a> |
+  <a href="#/non-existent-path">NotFound</a> | <a href="#/slot">slot</a> |
+  <a href="#/BaseLayout">BaseLayout</a> | <a href="#/namedSlot">namedSlot</a> |
+  <a href="#/componentBasics">componentBasics</a> |
+  <a href="#/noBuildSteps">noBuildSteps</a> |
+  <a href="#/UseComponents">UseComponents</a> |
+  <a href="#/PassProps">PassProps</a> |
+  <a href="#/mulBlogPost">mulBlogPost</a> |
+  <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
+  <a href="#/BasicExample">BasicExample</a> |
+  <a href="#/BasicUsage">BasicUsage</a>
   <component :is="currentView" />
 </template>
