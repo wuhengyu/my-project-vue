@@ -43,6 +43,9 @@ import ParentComponentInheritAttributes from "./Pages/DepthComponent/InheritAttr
 import TriggeringMonitorEvents from "./Pages/DepthComponent/ComponentEvent/TriggeringMonitorEvents.vue";
 import EventParameters from "./Pages/DepthComponent/ComponentEvent/EventParameters.vue";
 import ParentButtonClick from "./Pages/DepthComponent/ComponentEvent/ParentButtonClick.vue";
+import ModelParameterParent from "./Pages/DepthComponent/ComponentModel/ModelParameterParent.vue";
+import MultipleModelParent from "./Pages/DepthComponent/ComponentModel/MultipleModelParent.vue";
+import ProcessModelParent from "./Pages/DepthComponent/ComponentModel/ProcessModelParent.vue";
 
 const routes = {
   "/": App,
@@ -88,6 +91,9 @@ const routes = {
   "/TriggeringMonitorEvents": TriggeringMonitorEvents,
   "/EventParameters": EventParameters,
   "/ParentButtonClick": ParentButtonClick,
+  "/ModelParameterParent": ModelParameterParent,
+  "/MultipleModelParent": MultipleModelParent,
+  "/ProcessModelParent": ProcessModelParent,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -172,9 +178,12 @@ const currentView = computed(() => {
   <a href="#/TriggeringMonitorEvents">TriggeringMonitorEvents</a> |
   <a href="#/EventParameters">EventParameters</a> |
   <a href="#/ParentButtonClick">ParentButtonClick</a> |
+  <a href="#/ModelParameterParent">ModelParameterParent</a> |
 
   <h3>组件 v-model</h3>
   <a href="#/ComponentModel">ComponentModel</a> |
+  <a href="#/MultipleModelParent">MultipleModelParent</a> |
+  <a href="#/ProcessModelParent">ProcessModelParent</a> |
 
   <h3>透传 Attributes</h3>
   <a href="#/InhertAttributesApplication">InhertAttributesApplication</a> |
