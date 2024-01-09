@@ -46,6 +46,7 @@ import ParentButtonClick from "./Pages/DepthComponent/ComponentEvent/ParentButto
 import ModelParameterParent from "./Pages/DepthComponent/ComponentModel/ModelParameterParent.vue";
 import MultipleModelParent from "./Pages/DepthComponent/ComponentModel/MultipleModelParent.vue";
 import ProcessModelParent from "./Pages/DepthComponent/ComponentModel/ProcessModelParent.vue";
+import ModelModifierParameters from "./Pages/DepthComponent/ComponentModel/ModelModifierParameters.vue";
 
 const routes = {
   "/": App,
@@ -94,6 +95,7 @@ const routes = {
   "/ModelParameterParent": ModelParameterParent,
   "/MultipleModelParent": MultipleModelParent,
   "/ProcessModelParent": ProcessModelParent,
+  "/ModelModifierParameters": ModelModifierParameters,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -184,6 +186,7 @@ const currentView = computed(() => {
   <a href="#/ComponentModel">ComponentModel</a> |
   <a href="#/MultipleModelParent">MultipleModelParent</a> |
   <a href="#/ProcessModelParent">ProcessModelParent</a> |
+  <a href="#/ModelModifierParameters">ModelModifierParameters</a> |
 
   <h3>透传 Attributes</h3>
   <a href="#/InhertAttributesApplication">InhertAttributesApplication</a> |
