@@ -2,6 +2,8 @@
   <h3>父组件传递数据给子组件</h3>
   <div>
     <props-child-component :message="parentMessage" />
+    <!-- 或者 -->
+    <props-child-component message="hahahahahaha" />
   </div>
 </template>
 
