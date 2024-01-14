@@ -47,7 +47,8 @@ import ModelParameterParent from "./Pages/DepthComponent/ComponentModel/ModelPar
 import MultipleModelParent from "./Pages/DepthComponent/ComponentModel/MultipleModelParent.vue";
 import ProcessModelParent from "./Pages/DepthComponent/ComponentModel/ProcessModelParent.vue";
 import ModelModifierParameters from "./Pages/DepthComponent/ComponentModel/ModelModifierParameters.vue";
-
+import AttributesInherit from "./Pages/DepthComponent/InheritAttributes/AttributesInherit.vue";
+import OnParentAttributesInherit from "./Pages/DepthComponent/InheritAttributes/OnParentAttributesInherit.vue";
 const routes = {
   "/": App,
   "/calculate": calculate,
@@ -96,6 +97,8 @@ const routes = {
   "/MultipleModelParent": MultipleModelParent,
   "/ProcessModelParent": ProcessModelParent,
   "/ModelModifierParameters": ModelModifierParameters,
+  "/AttributesInherit": AttributesInherit,
+  "/OnParentAttributesInherit": OnParentAttributesInherit,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -193,7 +196,8 @@ const currentView = computed(() => {
   <a href="#/ParentComponentInheritAttributes"
     >ParentComponentInheritAttributes</a
   >
-  |
+  | <a href="#/AttributesInherit">AttributesInherit</a> | |
+  <a href="#/OnParentAttributesInherit">OnParentAttributesInherit</a> |
 
   <h3>插槽</h3>
 
