@@ -6,6 +6,3 @@
     Increase by 1
   </button>
 </template>
-
-<script setup>
-</script>

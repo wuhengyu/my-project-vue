@@ -51,7 +51,8 @@ import ModelModifierParametersMul from "./Pages/DepthComponent/ComponentModel/Mo
 import EventVerification from "./Pages/DepthComponent/ComponentEvent/EventVerification.vue";
 import PropValidation from "./Pages/DepthComponent/Props/PropValidation.vue";
 import PropValidationApp from "./Pages/DepthComponent/Props/PropValidationApp.vue";
-
+import AttributesInherit from "./Pages/DepthComponent/InheritAttributes/AttributesInherit.vue";
+import OnParentAttributesInherit from "./Pages/DepthComponent/InheritAttributes/OnParentAttributesInherit.vue";
 const routes = {
   "/": App,
   "/calculate": calculate,
@@ -104,6 +105,8 @@ const routes = {
   "/EventVerification": EventVerification,
   "/PropValidation": PropValidation,
   "/PropValidationApp": PropValidationApp,
+  "/AttributesInherit": AttributesInherit,
+  "/OnParentAttributesInherit": OnParentAttributesInherit,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -205,7 +208,8 @@ const currentView = computed(() => {
   <a href="#/ParentComponentInheritAttributes"
     >ParentComponentInheritAttributes</a
   >
-  |
+  | <a href="#/AttributesInherit">AttributesInherit</a> | |
+  <a href="#/OnParentAttributesInherit">OnParentAttributesInherit</a> |
 
   <h3>插槽</h3>
 
