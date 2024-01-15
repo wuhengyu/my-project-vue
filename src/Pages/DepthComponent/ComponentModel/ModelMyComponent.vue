@@ -2,9 +2,13 @@
 const props = defineProps(["title", "titleModifiers"]);
 defineEmits(["update:title"]);
 
-console.log(props.titleModifiers); // { capitalize: true }
+// console.log(props.titleModifiers); // { capitalize: true }
 </script>
 
 <template>
-  <input type="text" :value="modelValue" @input="emitValue" />
+  <input
+    type="text"
+    :value="title"
+    @input="$emit('update:title', $event.target.value)"
+  />
 </template>

@@ -47,6 +47,10 @@ import ModelParameterParent from "./Pages/DepthComponent/ComponentModel/ModelPar
 import MultipleModelParent from "./Pages/DepthComponent/ComponentModel/MultipleModelParent.vue";
 import ProcessModelParent from "./Pages/DepthComponent/ComponentModel/ProcessModelParent.vue";
 import ModelModifierParameters from "./Pages/DepthComponent/ComponentModel/ModelModifierParameters.vue";
+import ModelModifierParametersMul from "./Pages/DepthComponent/ComponentModel/ModelModifierParametersMul.vue";
+import EventVerification from "./Pages/DepthComponent/ComponentEvent/EventVerification.vue";
+import PropValidation from "./Pages/DepthComponent/Props/PropValidation.vue";
+import PropValidationApp from "./Pages/DepthComponent/Props/PropValidationApp.vue";
 
 const routes = {
   "/": App,
@@ -96,6 +100,10 @@ const routes = {
   "/MultipleModelParent": MultipleModelParent,
   "/ProcessModelParent": ProcessModelParent,
   "/ModelModifierParameters": ModelModifierParameters,
+  "/ModelModifierParametersMul": ModelModifierParametersMul,
+  "/EventVerification": EventVerification,
+  "/PropValidation": PropValidation,
+  "/PropValidationApp": PropValidationApp,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -175,18 +183,22 @@ const currentView = computed(() => {
 
   <h3>Props</h3>
   <a href="#/ParentMessage">ParentMessage</a> |
+  <a href="#/PropValidation">PropValidation</a> |
+  <a href="#/PropValidationApp">PropValidationApp</a> |
 
   <h3>事件</h3>
   <a href="#/TriggeringMonitorEvents">TriggeringMonitorEvents</a> |
   <a href="#/EventParameters">EventParameters</a> |
   <a href="#/ParentButtonClick">ParentButtonClick</a> |
   <a href="#/ModelParameterParent">ModelParameterParent</a> |
+  <a href="#/EventVerification">EventVerification</a> |
 
   <h3>组件 v-model</h3>
   <a href="#/ComponentModel">ComponentModel</a> |
   <a href="#/MultipleModelParent">MultipleModelParent</a> |
   <a href="#/ProcessModelParent">ProcessModelParent</a> |
   <a href="#/ModelModifierParameters">ModelModifierParameters</a> |
+  <a href="#/ModelModifierParametersMul">ModelModifierParametersMul</a> |
 
   <h3>透传 Attributes</h3>
   <a href="#/InhertAttributesApplication">InhertAttributesApplication</a> |
