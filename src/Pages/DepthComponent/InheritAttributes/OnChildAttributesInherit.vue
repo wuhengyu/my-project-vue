@@ -1,6 +1,7 @@
 <template>
   <div v-bind="attrs" @click="emitEvent">子组件内容</div>
   <div v-bind="$attrs" @click="emitEvent">子组件内容</div>
+  <div>{{ name }}</div>
 </template>
 
 <script setup>

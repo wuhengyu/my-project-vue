@@ -3,7 +3,7 @@
     :class="myClass"
     :style="myStyle"
     @myEvent="handleEvent"
-    :name="张三"
+    name="张三"
   />
 </template>
 

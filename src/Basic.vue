@@ -53,6 +53,13 @@ import PropValidation from "./Pages/DepthComponent/Props/PropValidation.vue";
 import PropValidationApp from "./Pages/DepthComponent/Props/PropValidationApp.vue";
 import AttributesInherit from "./Pages/DepthComponent/InheritAttributes/AttributesInherit.vue";
 import OnParentAttributesInherit from "./Pages/DepthComponent/InheritAttributes/OnParentAttributesInherit.vue";
+import ParentRef from "./Pages/ParentChildData/ParentRef.vue";
+import ParentReactive from "./Pages/ParentChildData/ParentReactive.vue";
+import ParentEmit from "./Pages/ParentChildData/ChildToParent/ParentEmit.vue";
+import ParentCross from "./Pages/ParentChildData/CrossComponent/ParentCross.vue";
+import FatherProps from "./Pages/ComponentsCommunication/FatherToChild/FatherProps.vue";
+import FatherTypeProps from "./Pages/ComponentsCommunication/FatherToChild/FatherTypeProps.vue";
+
 const routes = {
   "/": App,
   "/calculate": calculate,
@@ -107,6 +114,12 @@ const routes = {
   "/PropValidationApp": PropValidationApp,
   "/AttributesInherit": AttributesInherit,
   "/OnParentAttributesInherit": OnParentAttributesInherit,
+  "/ParentRef": ParentRef,
+  "/ParentReactive": ParentReactive,
+  "/ParentEmit": ParentEmit,
+  "/ParentCross": ParentCross,
+  "/FatherProps": FatherProps,
+  "/FatherTypeProps": FatherTypeProps,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -251,5 +264,17 @@ const currentView = computed(() => {
   <a href="#/AccessTemplateReference">AccessTemplateReference</a> |
   <a href="#/BasicExample">BasicExample</a> |
   <a href="#/BasicUsage">BasicUsage</a>
+
+  <h1>数据绑定</h1>
+  <h3>父组件中通过ref来引用子组件</h3>
+  <a href="#/ParentRef">ParentRef</a> |
+  <a href="#/ParentReactive">ParentReactive</a> |
+  <a href="#/ParentEmit">ParentEmit</a> |
+  <a href="#/ParentCross">ParentCross</a> |
+
+  <h1>组件通信</h1>
+  <h3>父组件通过props向子组件传递数据子组件</h3>
+  <a href="#/FatherProps">FatherProps</a> |
+  <a href="#/FatherTypeProps">FatherTypeProps</a> |
   <component :is="currentView" />
 </template>
