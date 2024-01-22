@@ -1,9 +1,40 @@
 <script>
 import { defineComponent } from "vue";
 
-// Child.vue
 export default defineComponent({
-  props: ["title", "index", "userName", "uid"],
+  // props: ["title", "index", "userName", "uid"],
+
+  // 或者
+  props: {
+    // 可选，并提供默认值
+    title: {
+      type: String,
+      required: false,
+      default: "默认标题",
+    },
+
+    // 默认可选，单类型
+    index: Number,
+
+    // 添加一些自定义校验
+    userName: {
+      type: String,
+
+      // 在这里校验用户名必须至少 3 个字
+      // validator: (v) => v.length >= 3,
+      validator: (value) => {
+        if (value.length >= 3) {
+          return true;
+        } else {
+          console.warn("defineComponent, 用户名校验失败");
+          return false;
+        }
+      },
+    },
+
+    // 默认可选，但允许多种类型
+    uid: [Number, String],
+  },
   // 在这里需要添加一个入参
   setup(props) {
     // 该入参包含了当前组件定义的所有 props

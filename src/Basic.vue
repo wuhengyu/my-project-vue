@@ -59,7 +59,8 @@ import ParentEmit from "./Pages/ParentChildData/ChildToParent/ParentEmit.vue";
 import ParentCross from "./Pages/ParentChildData/CrossComponent/ParentCross.vue";
 import FatherProps from "./Pages/ComponentsCommunication/FatherToChild/FatherProps.vue";
 import FatherTypeProps from "./Pages/ComponentsCommunication/FatherToChild/FatherTypeProps.vue";
-import ChildDefineComponent from "./Pages/ComponentsCommunication/FatherToChild/ChildDefineComponent.vue";
+import FatherDefineComponent from "./Pages/ComponentsCommunication/FatherToChild/FatherDefineComponent.vue";
+import FatherModel from "./Pages/ComponentsCommunication/VmodelEmits/FatherModel.vue";
 
 const routes = {
   "/": App,
@@ -121,7 +122,8 @@ const routes = {
   "/ParentCross": ParentCross,
   "/FatherProps": FatherProps,
   "/FatherTypeProps": FatherTypeProps,
-  "/ChildDefineComponent": ChildDefineComponent,
+  "/FatherDefineComponent": FatherDefineComponent,
+  "/FatherModel": FatherModel,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -278,6 +280,7 @@ const currentView = computed(() => {
   <h3>父组件通过props向子组件传递数据子组件</h3>
   <a href="#/FatherProps">FatherProps</a> |
   <a href="#/FatherTypeProps">FatherTypeProps</a> |
-  <a href="#/ChildDefineComponent">ChildDefineComponent</a> |
+  <a href="#/FatherDefineComponent">FatherDefineComponent</a> |
+  <a href="#/FatherModel">FatherModel</a> |
   <component :is="currentView" />
 </template>
