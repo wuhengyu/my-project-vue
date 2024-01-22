@@ -60,7 +60,10 @@ import ParentCross from "./Pages/ParentChildData/CrossComponent/ParentCross.vue"
 import FatherProps from "./Pages/ComponentsCommunication/FatherToChild/FatherProps.vue";
 import FatherTypeProps from "./Pages/ComponentsCommunication/FatherToChild/FatherTypeProps.vue";
 import FatherDefineComponent from "./Pages/ComponentsCommunication/FatherToChild/FatherDefineComponent.vue";
-import FatherModel from "./Pages/ComponentsCommunication/VmodelEmits/FatherModel.vue";
+import FatherModel from "./Pages/ComponentsCommunication/ModelToEmits/FatherModel.vue";
+import FatherRef from "./Pages/ComponentsCommunication/RefEmits/FatherRef.vue";
+import demo from "./Pages/ComponentsCommunication/RefEmits/demo.vue";
+import GrandFatherProvide from "./Pages/ComponentsCommunication/GrandFatherToGrandSon/GrandFatherProvide.vue";
 
 const routes = {
   "/": App,
@@ -124,6 +127,9 @@ const routes = {
   "/FatherTypeProps": FatherTypeProps,
   "/FatherDefineComponent": FatherDefineComponent,
   "/FatherModel": FatherModel,
+  "/FatherRef": FatherRef,
+  "/demo": demo,
+  "/GrandFatherProvide": GrandFatherProvide,
 };
 const currentPath = ref(window.location.hash);
 window.addEventListener("hashchange", () => {
@@ -282,5 +288,7 @@ const currentView = computed(() => {
   <a href="#/FatherTypeProps">FatherTypeProps</a> |
   <a href="#/FatherDefineComponent">FatherDefineComponent</a> |
   <a href="#/FatherModel">FatherModel</a> |
+  <a href="#/FatherRef">FatherRef</a> | <a href="#/demo">demo</a> |
+  <a href="#/GrandFatherProvide">GrandFatherProvide</a> |
   <component :is="currentView" />
 </template>
